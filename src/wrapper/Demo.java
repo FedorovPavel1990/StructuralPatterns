@@ -15,10 +15,10 @@ public class Demo {
         // Возникла необходимость расширить его функциональность, для этого делаем NotifierWrapper
         Notifier smsNotifier = new SMSNotifierWrapper(notifier, "+79991234567");
         Notifier emailNotifier = new EmailNotifierWrapper(notifier, "abc@abcdef.ru");
-        Notifier slackNotifier = new TiMeNotifierWrapper(notifier, "i.ivanov");
+        Notifier tiMeNotifier = new TiMeNotifierWrapper(notifier, "i.ivanov");
         smsNotifier.send(message);
         emailNotifier.send(message);
-        slackNotifier.send(message);
+        tiMeNotifier.send(message);
 
         Notifier emailSmsTiMeNotifier = new SMSNotifierWrapper(
                 new EmailNotifierWrapper(
