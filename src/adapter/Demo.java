@@ -1,6 +1,6 @@
 package adapter;
 
-import adapter.adapter.RoundPegAdapter;
+import adapter.adapter.RoundPegSquareAdapter;
 import adapter.hole.SquareHole;
 import adapter.peg.RoundPeg;
 import adapter.peg.SquarePeg;
@@ -20,13 +20,13 @@ public class Demo {
         RoundPeg smallRoundPeg = new RoundPeg(2);
         RoundPeg largeRoundPeg = new RoundPeg(3);
 
-        // Делаем RoundPegAdapter, так как на входе метода isPegFitsIntoHole() вторым аргументом должен быть SquarePeg,
-        // для этого адаптируем RoundPeg к SquarePeg в классе RoundPegAdapter
-        RoundPegAdapter smallRoundPegAdapter = new RoundPegAdapter(smallRoundPeg);
-        RoundPegAdapter largeRoundPegAdapter = new RoundPegAdapter(largeRoundPeg);
+        // Делаем RoundPegSquareAdapter, так как на входе метода isPegFitsIntoHole() вторым аргументом должен быть
+        // SquarePeg, для этого адаптируем RoundPeg к SquarePeg в классе RoundPegSquareAdapter
+        RoundPegSquareAdapter smallRoundPegSquareAdapter = new RoundPegSquareAdapter(smallRoundPeg);
+        RoundPegSquareAdapter largeRoundPegSquareAdapter = new RoundPegSquareAdapter(largeRoundPeg);
 
-        isPegFitsIntoHole(squareHole, smallRoundPegAdapter);
-        isPegFitsIntoHole(squareHole, largeRoundPegAdapter);
+        isPegFitsIntoHole(squareHole, smallRoundPegSquareAdapter);
+        isPegFitsIntoHole(squareHole, largeRoundPegSquareAdapter);
     }
 
     private static void isPegFitsIntoHole(SquareHole hole, SquarePeg peg) {

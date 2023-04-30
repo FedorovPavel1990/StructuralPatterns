@@ -6,11 +6,11 @@ import adapter.peg.SquarePeg;
 /**
  * Адаптируем RoundPeg к SquarePeg
  */
-public class RoundPegAdapter extends SquarePeg {
+public class RoundPegSquareAdapter extends SquarePeg {
 
     private final RoundPeg roundPeg;
 
-    public RoundPegAdapter(RoundPeg roundPeg) {
+    public RoundPegSquareAdapter(RoundPeg roundPeg) {
         super(roundPeg.getRadius() * 2);
         this.roundPeg = roundPeg;
     }
