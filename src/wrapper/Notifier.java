@@ -1,8 +1,7 @@
 package wrapper;
 
-public class Notifier implements NotifierWrapperInterface {
+public class Notifier {
 
-    @Override
     public void send(String message) {
         System.out.printf("Отправляю сообщение: %s\n", message);
     }

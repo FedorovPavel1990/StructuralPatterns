@@ -1,5 +1,9 @@
 package wrapper;
 
+import wrapper.notifierwrapper.EmailNotifierWrapper;
+import wrapper.notifierwrapper.SMSNotifierWrapper;
+import wrapper.notifierwrapper.TiMeNotifierWrapper;
+
 public class Demo {
 
     public static void main(String[] args) {
@@ -9,19 +13,20 @@ public class Demo {
         notifier.send(message);
 
         // Возникла необходимость расширить его функциональность, для этого делаем NotifierWrapper
-        NotifierWrapperInterface smsNotifier = new SMSNotifierWrapper(notifier, "+79991234567");
-        NotifierWrapperInterface emailNotifier = new EmailNotifierWrapper(notifier, "abc@abcdef.ru");
-        NotifierWrapperInterface slackNotifier = new SlackNotifierWrapper(notifier, "i.ivanov");
+        Notifier smsNotifier = new SMSNotifierWrapper(notifier, "+79991234567");
+        Notifier emailNotifier = new EmailNotifierWrapper(notifier, "abc@abcdef.ru");
+        Notifier slackNotifier = new TiMeNotifierWrapper(notifier, "i.ivanov");
         smsNotifier.send(message);
         emailNotifier.send(message);
         slackNotifier.send(message);
 
-        NotifierWrapperInterface emailSmsSlackNotifier = new SMSNotifierWrapper(
+        Notifier emailSmsTiMeNotifier = new SMSNotifierWrapper(
                 new EmailNotifierWrapper(
-                        new SlackNotifierWrapper(notifier, "p.petrov"),
+                        new TiMeNotifierWrapper(notifier,
+                                "p.petrov"),
                         "iiii@abcdef.ru"),
                 "+79991112233");
-        emailSmsSlackNotifier.send(message);
+        emailSmsTiMeNotifier.send(message);
     }
 
 //    Результат работы:
