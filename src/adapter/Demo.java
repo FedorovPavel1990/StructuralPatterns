@@ -1,5 +1,10 @@
 package adapter;
 
+import adapter.adapter.RoundPegAdapter;
+import adapter.hole.SquareHole;
+import adapter.peg.RoundPeg;
+import adapter.peg.SquarePeg;
+
 /**
  * Допутим был функционал по проверке вписывается ли квадратный колышек в квадратное отверстие, нам нужно добавить в
  * этот функционал возможность проверять вписывается ли круглый колышек в квадратное отверстие

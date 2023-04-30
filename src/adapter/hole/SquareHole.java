@@ -1,4 +1,6 @@
-package adapter;
+package adapter.hole;
+
+import adapter.peg.SquarePeg;
 
 public class SquareHole {
 

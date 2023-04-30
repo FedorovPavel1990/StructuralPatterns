@@ -1,10 +1,11 @@
-package adapter;
+package adapter.peg;
 
-public class RoundPeg {
+public class RoundPeg extends Peg {
 
     private final int radius;
 
     public RoundPeg(int radius) {
+        super("Круглый колышек радиусом " + radius);
         this.radius = radius;
     }
 
