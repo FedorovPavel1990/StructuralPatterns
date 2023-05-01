@@ -17,7 +17,7 @@ public class TeaShop {
     }
 
     public void serve() {
-        orders.forEach((table, tea) -> System.out.printf("Несем %s за столик номер %d\n", tea, table));
+        orders.forEach((table, tea) -> System.out.printf("Несем чашку %s за столик номер %d\n", tea, table));
     }
 
 }

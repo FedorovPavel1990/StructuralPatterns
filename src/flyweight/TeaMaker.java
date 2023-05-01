@@ -14,10 +14,10 @@ public class TeaMaker {
         if (optionalTea.isEmpty()) {
             tea = new Tea(teaType);
             availableTea.add(tea);
-            System.out.printf("Сделали новый %s\n", tea);
+            System.out.printf("Сделали чайник с %s\n", tea);
         } else {
             tea = optionalTea.get();
-            System.out.printf("%s был уже готов\n", tea);
+            System.out.printf("Чайник с %s уже есть\n", tea);
         }
         return tea;
     }
